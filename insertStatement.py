@@ -33,6 +33,8 @@ def connect():
             conn.close()
             print('Database connection closed.')
  
+''' 
+# Demo
 def insert_vendor(vendor_name):
     """ insert a new vendor into the vendors table """
     sql = """INSERT INTO vendors(vendor_name)
@@ -62,6 +64,7 @@ def insert_vendor(vendor_name):
  
     return vendor_id 
 
+# Demo Multiple
 def insert_vendor_list(vendor_list):
     """ insert multiple vendors into the vendors table  """
     sql = "INSERT INTO vendors(vendor_name) VALUES(%s)"
@@ -84,12 +87,15 @@ def insert_vendor_list(vendor_list):
     finally:
         if conn is not None:
             conn.close()
- 
+'''
 if __name__ == '__main__':
 	connect()
+	'''
+	# Demo Function
 	insert_vendor("3M Co.")
 	insert_vendor_list([
 		('AKM SEMICONDUCTOR LTD',),
 		('APPL INCORPO COOOOO',),
 		('E CORP',)
 	])
+	'''
